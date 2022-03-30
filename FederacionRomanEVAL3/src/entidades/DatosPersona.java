@@ -7,13 +7,15 @@ import java.util.Scanner;
 import utils.Utilidades;
 import validaciones.Validaciones;
 
+
+
 public class DatosPersona {
 	private long id;
 	private String nombre;
 	private String telefono;
 	private LocalDate fechaNac;
 
-	private Documentacion nifnie; //Examen 2 Ejercicio 3.2
+	private Documentacion nifnie; // Examen 2 Ejercicio 3.2
 
 	public DatosPersona(long id, String nombre, String telefono, LocalDate fechaNac) {
 		super();
@@ -22,8 +24,8 @@ public class DatosPersona {
 		this.telefono = telefono;
 		this.fechaNac = fechaNac;
 	}
-	
-	//Examen 2 Ejercicio 3.2
+
+	// Examen 2 Ejercicio 3.2
 	public DatosPersona(long id, String nombre, String telefono, LocalDate fechaNac, Documentacion nifnie) {
 		super();
 		this.id = id;
@@ -77,6 +79,12 @@ public class DatosPersona {
 	public String toString() {
 		return nombre + " NIF/NIE: " + nifnie.mostrar() + " Tfn:" + telefono + " ("
 				+ fechaNac.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")";
+	}
+
+	// Examen 9 Ejercicio 1.A
+	public String data() {
+		return "" + this.id + "|" + this.nombre + "|" + this.telefono + "|" + this.fechaNac + "|" + this.nifnie;
+
 	}
 
 	// Examen 2 Ejercicio 3.3
