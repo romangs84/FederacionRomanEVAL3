@@ -18,7 +18,9 @@ public class Prueba {
 	private Colegiado[] arbitraje = new Colegiado[3];
 	private Resultado resultado = null;
 	private Participante[] participantes;
-
+    private Patrocinador idPatrocinador;
+	
+	
 	public Prueba(long id, String nombre, LocalDate fecha, Lugar lugar, boolean ind) {
 		this.id = id;
 		this.nombre = nombre;
@@ -66,6 +68,16 @@ public class Prueba {
 		this.participantes = participantes;
 		this.arbitraje = arbitraje;
 		this.resultado = res;
+	}
+	
+	public Prueba(long id, String nombre, LocalDate fecha, Lugar lugar, boolean ind, Patrocinador idPatrocinador) {
+		this.id = id;
+		this.nombre = nombre;
+		this.fecha = fecha;
+		this.lugar = lugar;
+		this.individual = ind;
+		this.idPatrocinador = idPatrocinador;
+		
 	}
 
 	public Resultado getResultado() {
@@ -218,7 +230,8 @@ public class Prueba {
 	@Override
 	public String toString() {
 		String ret = "";
-		ret += "" + id + "." + nombre + " (" + fecha.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " en " + lugar.getNombre() + ") de tipo " + (this.isIndividual()?"individual":"colectiva")+"\n";
+		ret += "" + id + "." + nombre + " (" + fecha.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + " en " + lugar.getNombre() + ") de tipo " 
+		+ (this.isIndividual()?"individual":"colectiva")+"\n" + "|" + this.idPatrocinador;
 		if(this.hayEquipoArbitral()) {
 			ret += this.nombresEquipoArbitral();
 		}
@@ -240,6 +253,7 @@ public class Prueba {
 		String nombre = "";
 		Lugar lugar;
 		boolean valido = false;
+		Patrocinador idPatrocinador;
 		do {
 			System.out.println("Introduzca el id de la nueva prueba:");
 			in = new Scanner(System.in);
@@ -283,6 +297,16 @@ public class Prueba {
 
 		ret = new Prueba(id, nombre, fecha, lugar, ind);
 		return ret;
+		
+	int idPatrocinador = -1;
+	}
+
+	public Patrocinador getIdPatrocinador() {
+		return idPatrocinador;
+	}
+
+	public void setIdPatrocinador(Patrocinador idPatrocinador) {
+		this.idPatrocinador = idPatrocinador;
 	}
 
 }

@@ -7,8 +7,6 @@ import java.util.Scanner;
 import utils.Utilidades;
 import validaciones.Validaciones;
 
-
-
 public class DatosPersona {
 	private long id;
 	private String nombre;
@@ -83,7 +81,8 @@ public class DatosPersona {
 
 	// Examen 9 Ejercicio 1.A
 	public String data() {
-		return "" + this.id + "|" + this.nombre + "|" + this.telefono + "|" + this.fechaNac + "|" + this.nifnie;
+		return "" + this.getId() + "|" + this.getNombre() + "|" + this.getTelefono() + "|" + this.getFechaNac() + "|"
+				+ this.getNifnie();
 
 	}
 
