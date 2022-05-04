@@ -1,6 +1,8 @@
-package entidades;
+package comparadores;
 
 import java.util.Comparator;
+
+import entidades.DatosPersona;
 
 public class ComparadorAlfabetico implements Comparator<DatosPersona> {
 

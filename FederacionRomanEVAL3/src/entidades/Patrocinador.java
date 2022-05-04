@@ -35,7 +35,7 @@ public class Patrocinador {
 		long idPatrocinador = -1;
 		String nombre = "";
 		String web = "";
-		double dotacion = "";
+		double dotacion = 0.0;
 		boolean valido;
 		do {
 			System.out.println("Introduzca el id para el nuevo Patrocinador");
