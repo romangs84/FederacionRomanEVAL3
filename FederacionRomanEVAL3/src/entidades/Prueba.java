@@ -298,7 +298,7 @@ public class Prueba {
 		ret = new Prueba(id, nombre, fecha, lugar, ind);
 		return ret;
 		
-	int idPatrocinador = -1;
+
 	}
 
 	public Patrocinador getIdPatrocinador() {

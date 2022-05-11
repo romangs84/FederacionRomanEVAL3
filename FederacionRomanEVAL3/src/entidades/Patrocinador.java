@@ -36,7 +36,7 @@ public class Patrocinador {
 		String nombre = "";
 		String web = "";
 		double dotacion = 0.0;
-		boolean valido;
+		boolean valido = false;
 		do {
 			System.out.println("Introduzca el id para el nuevo Patrocinador");
 			Scanner in = new Scanner(System.in);
@@ -50,7 +50,7 @@ public class Patrocinador {
 		do {
 			Scanner in = new Scanner(System.in);
 			System.out.println("Introduzca un nombre del Patrocinador");
-			nombre = in.nextInt();
+		
 
 		} while (!valido);
 
