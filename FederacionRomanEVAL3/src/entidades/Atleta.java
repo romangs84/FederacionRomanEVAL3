@@ -75,6 +75,10 @@ public class Atleta extends Participante {
 		return this.persona;
 	}
 
+	public int getIdEquipo() {
+		return this.getIdEquipo();
+	}
+
 	// Examen 5 Ejercicio 5
 	/***
 	 * Función que pregunta al usuario por cada uno de los campos para un nuevo

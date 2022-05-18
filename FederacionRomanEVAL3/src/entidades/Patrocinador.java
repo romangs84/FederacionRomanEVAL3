@@ -97,4 +97,8 @@ public class Patrocinador {
 		this.id = id;
 	}
 
+	public static Object[] values() {
+		return null;
+	}
+
 }
